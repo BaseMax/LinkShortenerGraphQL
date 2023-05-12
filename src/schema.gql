@@ -1,0 +1,67 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  email: String!
+}
+
+type AuthPayload {
+  user: User!
+  token: String!
+}
+
+type ShortUrl {
+  id: ID!
+  shortLink: String!
+  fullLink: String!
+  user: User!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getShortUrlById(id: ID!): ShortUrl!
+  getShortUrlByShortLink(shortLink: ID!): ShortUrl!
+  user: User!
+  users: [User!]!
+}
+
+type Mutation {
+  createShortUrl(input: CreateShortUrlInput!): ShortUrl!
+  updateShortUrl(input: UpdateShortUrlInput!): ShortUrl!
+  deleteShortUrl(id: ID!): Boolean!
+  register(input: RegisterUserInput!): AuthPayload!
+  login(input: LoginUserInput!): AuthPayload!
+}
+
+input CreateShortUrlInput {
+  fullLink: String!
+  shortLink: String
+}
+
+input UpdateShortUrlInput {
+  fullLink: String
+  shortLink: String
+  id: ID!
+}
+
+input RegisterUserInput {
+  email: String!
+  firstName: String!
+  lastName: String!
+  password: String!
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}

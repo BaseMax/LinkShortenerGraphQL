@@ -73,7 +73,7 @@ query {
 
 2. Get a short URL by ID:
 
-``gql
+```gql
 query {
   getShortUrlById(id: "123") {
     id

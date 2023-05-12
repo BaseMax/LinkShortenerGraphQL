@@ -13,7 +13,7 @@ services:
         ports:
             - 3000:3000
         command:
-            ["yarn", "test:e2e"]
+            ["yarn", "test:e2e" ,"--runInBand"]
         environment:
             - DATABASE_URL=postgres://postgres:postgres@db:5432/test
             - NODE_ENV=testing

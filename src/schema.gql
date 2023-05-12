@@ -29,10 +29,9 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 scalar DateTime
 
 type Query {
-  getShortUrlById(id: ID!): ShortUrl!
-  getShortUrlByShortLink(shortLink: ID!): ShortUrl!
+  getShortUrlById(id: ID!): ShortUrl
+  getShortUrlByShortLink(shortLink: ID!): ShortUrl
   user: User!
-  users: [User!]!
 }
 
 type Mutation {

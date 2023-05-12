@@ -25,7 +25,7 @@ export class ShortUrlsResolver {
     private usersService: UsersService,
   ) { }
   @OptionalAuth()
-  @Query(() => ShortUrl)
+  @Query(() => ShortUrl, { nullable: true })
   async getShortUrlById(
     @Args({ name: 'id', type: () => ID })
     id: string,
@@ -33,7 +33,7 @@ export class ShortUrlsResolver {
     return this.service.getShortUrlById(id);
   }
   @OptionalAuth()
-  @Query(() => ShortUrl)
+  @Query(() => ShortUrl, { nullable: true })
   async getShortUrlByShortLink(
     @Args({ name: 'shortLink', type: () => ID })
     shortLink: string,

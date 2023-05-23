@@ -1,10 +1,9 @@
-# LinkShortenerGraphQL
+# Link-Shortener GraphQL TypeScript
 
 LinkShortenerGraphQL is a simple URL shortener service that uses GraphQL and NestJS to provide a fast and scalable API for shortening and managing URLs. The project is based on the popular nestjs/graphql package and leverages the power of GraphQL to provide a flexible and efficient API for creating, reading, updating, and deleting shortened URLs.
+
 ![tests](https://github.com/BaseMax/LinkShortenerGraphQL/assets/51885828/2e63e815-e7f3-4181-814a-81b3e606ecea)
 ![apollo-sandbox](https://github.com/BaseMax/LinkShortenerGraphQL/assets/51885828/8dc783a3-df47-47d2-9937-27f1af943e5a)
-
-
 
 ## Features
 
@@ -187,8 +186,10 @@ For a complete list of available queries and mutations, see the GraphQL schema f
 
 ## Contributing
 
-Contributions to the project are welcome! To contribute, follow these steps:
+Contributions to the project are welcome!
 
 ## License
 
 This project is licensed under the GPL-3.0 license. See the LICENSE file for more details.
+
+Copyright 2023, Max Base
